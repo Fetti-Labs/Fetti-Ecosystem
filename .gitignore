@@ -110,3 +110,5 @@ build/
 #lockfiles
 yarn.lock
 
+#deploy files
+deploy.sh
