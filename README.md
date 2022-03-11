@@ -21,12 +21,12 @@
 1. Clone the repository
 
    ```
-   git clone https://github.com/EatMyUnicorn/Fetti.life
+   git clone https://github.com/EatMyUnicorn/fetti-ecosystem
    ``` 
 2. Install dependencies, this can take a minute
 
    ```
-   cd fetti.life
+   cd fetti-ecosystem
    yarn
    ```
 3. Start the local server
