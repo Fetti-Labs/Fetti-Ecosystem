@@ -21,7 +21,7 @@
     "@solana/spl-token-registry": "^0.2.2808",
     "@solana/web3.js": "^1.36.0",
     "@stripe/react-stripe-js": "^1.4.1",
-    "@stripe/stripe-js": "^1.16.0",
+    "@stripe/stripe-js": "^1.24.0",
     "aos": "^2.3.4",
     "classnames": "^2.3.1",
     "date-fns": "^2.23.0",
