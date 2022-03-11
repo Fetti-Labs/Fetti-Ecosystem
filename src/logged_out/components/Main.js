@@ -34,6 +34,13 @@ function Main(props) {
     setSelectedTab("Home");
   }, [setSelectedTab]);
 
+  const selectArk = useCallback(() => {
+    smoothScrollTop();
+    document.title =
+      "Fetti.Life | A.R.K. Protocol";
+    setSelectedTab("ARK");
+  }, [setSelectedTab]);
+
   const selectMarket = useCallback(() => {
     smoothScrollTop();
     document.title =
@@ -128,6 +135,7 @@ function Main(props) {
         selectWhite={selectWhite}
         selectSwap={selectSwap}
         selectHome={selectHome}
+        selectArk={selectArk}
       />
       <Footer />
     </div>

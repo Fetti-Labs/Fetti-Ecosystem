@@ -30,6 +30,9 @@ function App() {
             <Route path="/whitepaper">
               <LoggedOutComponent />
             </Route>
+            <Route path="/ark">
+              <LoggedOutComponent />
+            </Route>
             <Route>
               <LoggedOutComponent />
             </Route>

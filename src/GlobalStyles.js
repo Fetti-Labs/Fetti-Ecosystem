@@ -28,9 +28,10 @@ const styles = theme => ({
       alignItems: "center",
     },
     ".nav-logo": {
-      height: "50px",
+      height: "60px",
       width: "auto",
       marginRight: "15px",
+      display:"block",
     },
     ".container": {
       width: "100%",
@@ -99,10 +100,13 @@ const styles = theme => ({
       }
     },
     "#HeadSection": {
-      background: 'url(https://techcrunch.com/wp-content/uploads/2021/10/GettyImages-1191009127.jpg) !important',
       backgroundRepeat: 'no-repeat !important',
       backgroundSize: "cover !important",
+      marginBottom : "0px !important",
+      backgroundColor: "#234531",
+      backgroundImage: "linear-gradient(180deg, #234531 7%, #000000 15%,#000000 50%,#000000 85%, #234531 115%)",
     },
+
     "[data-aos^=zoom][data-aos^=zoom].aos-animate": {
       opacity: ".98 !important",
     },
@@ -111,6 +115,7 @@ const styles = theme => ({
       backgroundSize: "cover",
       borderRadius: "25px",
     },
+ 
     "#FeatureSection":{
       textAlign: "center",
     },
@@ -125,6 +130,11 @@ const styles = theme => ({
     },
     "footer.lg-p-top":{
       marginBottom: "0px !important",
+      paddingTop: "0px !important",
+      background: "linear-gradient(180deg, #234531 0%, #000000 10%,#000000 50%,#000000 90%, #234531 115%) !important",
+    },
+    "footer.lg-p-top div": {
+      background: "none",
     },
     ".MuiPaper-rounded":{
       borderRadius:"25px !important"
@@ -157,6 +167,22 @@ const styles = theme => ({
         maxWidth: "500px"
       }    
     },
+    ".MuiTypography-paragraph, .MuiTypography-colorTextSecondary, .MuiTypography-h6, .MuiTypography-body1, .MuiButton-label, .MuiInputBase-input, button": {
+      fontFamily: "'Baloo Bhaijaan', cursive !important",
+    },
+    ".MuiButton-textSizeLarge": {
+      fontSize: "1.7em !important",
+    },
+    "body": {
+      backgroundColor: "rgb(36, 40, 44) !important",
+    },
+    "#TeamSection" : {
+      marginBottom: "40px",
+    },
+    "div#Ecosystem": {
+      backgroundColor: "#234531",
+      backgroundImage: "linear-gradient(180deg, #112218 0.4%, #fff 1%,#fff 50%)",
+    }
   }
 });
 
