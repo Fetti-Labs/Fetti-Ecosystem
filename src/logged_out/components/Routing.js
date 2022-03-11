@@ -6,10 +6,12 @@ import Home from "./home/Home";
 import Whitepaper from "./whitepaper/Whitepaper";
 import Swap from "./swap/Swap";
 import Market from "./market/Market";
+import Ark from "./ark/Ark";
 import useLocationBlocker from "../../shared/functions/useLocationBlocker";
 
+
 function Routing(props) {
-  const { selectMarket, selectWhite, selectSwap, selectHome } = props;
+  const { selectMarket, selectWhite, selectSwap, selectHome, selectArk } = props;
   useLocationBlocker();
   return (
     <Switch>
@@ -29,16 +31,26 @@ function Routing(props) {
         selectMarket={selectMarket} 
       />
       <PropsRoute 
+        path="/ARK" 
+        component={Ark} 
+        selectArk={selectArk} 
+      />
+      <PropsRoute 
         path="/" 
         component={Home} 
         selectHome={selectHome} 
       />
+
     </Switch>
   );
 }
 
 Routing.propTypes = {
-  selectHome: PropTypes.func.isRequired
+  selectHome: PropTypes.func.isRequired,
+  selectMarket: PropTypes.func.isRequired,
+  selectWhite: PropTypes.func.isRequired,
+  selectSwap: PropTypes.func.isRequired,
+  selectArk: PropTypes.func.isRequired,
 };
 
 export default memo(Routing);

@@ -107,12 +107,23 @@ function FeatureSection(props) {
   return (
     <div id="Ecosystem" style={{ backgroundColor: "#FFFFFF" }}>
       <div className="container-fluid lg-p-top">
-        <Typography variant="h3" align="center" className="lg-mg-bottom">
-          Fetti Ecosystem
-        </Typography>
         <div className="container-fluid" id="FeatureSection">
+        <Typography variant="h3" align="center" className="lg-mg-bottom">
+          A.R.K. PROTOCOL
+          <Typography
+          variant={isWidthUp("lg", width) ? "h6" : "body1"}
+          color="textSecondary"
+        >
+          Check back soon.
+        </Typography>
+        </Typography>
+
+
+{
+  /*          
           <Grid container spacing={calculateSpacing(width)}>
             {features.map(element => (
+
               <Grid
                 item
                 xs={12}
@@ -124,6 +135,8 @@ function FeatureSection(props) {
                 }
                 key={element.headline}
               >
+
+                
                 <FeatureCard
                   Icon={element.icon}
                   color={element.color}
@@ -131,9 +144,12 @@ function FeatureSection(props) {
                   text={element.text}
                   Link={element.Link}
                 />
+
               </Grid>
             ))}
           </Grid>
+*/
+}
         </div>
       </div>
     </div>

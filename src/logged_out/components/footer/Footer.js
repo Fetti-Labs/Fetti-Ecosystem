@@ -161,44 +161,11 @@ function Footer(props) {
   const { classes, theme, width } = props;
   return (
     <footer className="lg-p-top">
-
-      <div className={classes.footerInner}>
+ 
+      <div className={classes.footerInner} >
         <Grid container spacing={isWidthUp("md", width) ? 10 : 5}>
-          <Grid item xs={12} md={6} lg={4}>
-            <form  
-              action="mailto:fetti.labs@gmail.com"
-              method="POST"
-              enctype="multipart/form-data"
-              name="Fetti.life Get in touch"
-            >
-
-              <Box display="flex" flexDirection="column">
-                <Box mb={1}>
-                  <TextField
-                    variant="outlined"
-                    multiline
-                    placeholder="Get in touch with us"
-                    inputProps={{ "aria-label": "Get in Touch" }}
-                    InputProps={{
-                      className: classes.whiteBg
-                    }}
-                    rows={4}
-                    fullWidth
-                    required
-                  />
-                </Box>
-                <ColoredButton
-                  color={theme.palette.common.white}
-                  variant="outlined"
-                  type="submit"
-                >
-                  Send Message
-                </ColoredButton>
-              </Box>
-            </form>
-          </Grid>
           <Hidden mdDown>
-            <Grid item xs={12} md={6} lg={4}>
+            <Grid item xs={12} md={6} lg={6}>
               <Box display="flex" justifyContent="center">
                 <div>
                   {infos.map((info, index) => (
@@ -227,12 +194,12 @@ function Footer(props) {
               </Box>
             </Grid>
           </Hidden>
-          <Grid item xs={12} md={6} lg={4}>
+          <Grid item xs={12} md={6} lg={6}>
             <Typography variant="h6" paragraph className="text-white">
-              Fetti.Life
+              FETTI ECOSYSTEM
             </Typography>
             <Typography style={{ color: "#8f9296" }} paragraph>
-              Every good deed deserves Fetti.
+              Every Act of Random Kindness Desrves Another
             </Typography>
             <Box display="flex">
               {socialIcons.map((socialIcon, index) => (

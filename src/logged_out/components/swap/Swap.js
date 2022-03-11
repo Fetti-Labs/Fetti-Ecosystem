@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { Grid, Box, isWidthUp, withWidth, withStyles, Typography } from "@material-ui/core";
+import { Grid, Box, withWidth, withStyles, Typography } from "@material-ui/core";
 
 const styles = (theme) => ({
   blogContentWrapper: {
@@ -24,9 +24,9 @@ const styles = (theme) => ({
 
 
 function Swap(props) {
-  const { classes, width, selectSwap } = props;
+  const { classes, selectSwap } = props;
   useEffect(() => {
-    selectSwap();
+    selectSwap(); 
   }, [selectSwap]);
 
   return (
