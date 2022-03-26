@@ -159,6 +159,17 @@ const styles = theme => ({
       fontWeight: "400 !important",
       color: "#234531 !important",
     },
+    "#Tokenomics h4.MuiTypography-root.MuiTypography-h4, #Tokenomics h3.MuiTypography-root.MuiTypography-h3": {
+      fontFamily: "'Baloo Bhaijaan', cursive !important" ,
+      fontWeight: "400 !important",
+      color: "#234531 !important",
+    },
+    "text": {
+      fontFamily: "'Baloo Bhaijaan', cursive !important" ,
+      fontWeight: "100 !important",
+      color: "#234531 !important",
+      fill: "#234531 !important",
+    },
     ".jss12": {
       [theme.breakpoints.down("sm")]: {
         maxWidth: "500px"
@@ -182,7 +193,10 @@ const styles = theme => ({
     "div#Ecosystem": {
       backgroundColor: "#234531",
       backgroundImage: "linear-gradient(180deg, #112218 0.4%, #fff 1%,#fff 50%)",
-    }
+    },
+    ".canvasjs-chart-credit" : {
+        display:"none !important"
+    },
   }
 });
 

@@ -51,7 +51,7 @@ function Main(props) {
   const selectSwap = useCallback(() => {
     smoothScrollTop();
     document.title =
-      "Fetti.Life | Token Swap";
+      "Fetti.Life | Token Swap"; 
     setSelectedTab("Swap");
   }, [setSelectedTab]);
 
@@ -61,7 +61,6 @@ function Main(props) {
       "Fetti.Life | Whitepaper";
     setSelectedTab("Whitepaper");
   }, [setSelectedTab]);
-
 
   const openLoginDialog = useCallback(() => {
     setDialogOpen("login");
@@ -136,6 +135,7 @@ function Main(props) {
         selectSwap={selectSwap}
         selectHome={selectHome}
         selectArk={selectArk}
+     //   selectWinners={selectWinners}
       />
       <Footer />
     </div>

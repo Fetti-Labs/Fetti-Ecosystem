@@ -35,6 +35,17 @@ function Routing(props) {
         component={Ark} 
         selectArk={selectArk} 
       />
+      {
+      /*
+  
+      <PropsRoute 
+        path="/Winners" 
+        component={Winners} 
+        selectArk={selectWinners} 
+      />
+
+      */
+      }
       <PropsRoute 
         path="/" 
         component={Home} 
