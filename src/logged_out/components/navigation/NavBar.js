@@ -87,8 +87,6 @@ function NavBar(props) {
   const logo = "/logo.svg";
   const {
     classes,
-    openRegisterDialog,
-    openLoginDialog,
     handleMobileDrawerOpen,
     handleMobileDrawerClose,
     mobileDrawerOpen,
@@ -114,7 +112,12 @@ function NavBar(props) {
       link: "/Whitepaper",
       name: "Whitepaper",
       icon: <BookIcon className="text-white" />
-    },
+    },    
+  //  {
+  //    link: "/Winners",
+  //    name: "Giveaway Winners",
+  //    icon: <BookIcon className="text-white" />
+  //  },
     {
       link: "https://dao-beta.mango.markets/dao/DgeDDRXFDTKvuZorMG4BRHRsycy7vCSAk9mHEqkNurWx",
       name: "DAO",

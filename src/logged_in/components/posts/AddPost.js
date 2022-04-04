@@ -107,12 +107,12 @@ function AddPost(props) {
               </Button>
             </Box>
             <Button
-              onClick={handleUpload}
+          //    onClick={handleUpload}
               variant="contained"
               color="secondary"
-              disabled={files.length === 0 || loading}
+             // disabled={files.length === 0 || loading}
             >
-              Upload {loading && <ButtonCircularProgress />}
+              Register 
             </Button>
           </Fragment>
         }

@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, {Fragment} from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import {
@@ -11,11 +11,14 @@ import {
   withStyles,
   withWidth,
   isWidthUp,
+  TextField
 } from "@material-ui/core";
+
 import { Link } from "react-router-dom";
-
-
-
+import ButtonCircularProgress from "../../../shared/components/ButtonCircularProgress";
+import json from "./recipients.json";
+import jsonwins from "./winners.json";
+import jsonloss from "./losers.json";
 
 
 const styles = (theme) => ({
@@ -100,6 +103,29 @@ const styles = (theme) => ({
     paddingTop: theme.spacing(4),
   },
 });
+const walletKey = "";
+
+function hasMatch(obj, match){
+  var hasMatch =false;
+  for (var x = 0; x < obj.length; ++x) {
+
+    var winner = obj[x];
+
+    if(winner == match){
+      hasMatch = true;
+      console.log("match");
+      break;
+    }
+  }
+  if(hasMatch)
+  {
+    return true;
+  }
+  
+  return false;
+}
+
+
 
 function HeadSection(props) {
   const { classes, theme, width } = props;
@@ -117,7 +143,7 @@ function HeadSection(props) {
             >
               <div className={classNames(classes.containerFix, "container")}>
                 <Box justifyContent="space-between" className="row">
-                  <Grid item xs={12} md={5}>
+                  <Grid item xs={12} md={12}>
                     <Box
                       display="flex"
                       flexDirection="column"
@@ -131,7 +157,7 @@ function HeadSection(props) {
                         <Typography
                           variant={isWidthUp("lg", width) ? "h3" : "h4"}
                         >
-                          What is Fetti?
+                          Congratulations to our Winners!
                         </Typography>
                       </Box>
                       <div>
@@ -140,42 +166,67 @@ function HeadSection(props) {
                             variant={isWidthUp("lg", width) ? "h6" : "body1"}
                             color="textSecondary"
                           >
-                            The Fetti Ecosystem Is designed to remove the stressful nature of tasks 
-                            beyond your capabilities with the help of a community. Utilizing the Solana 
-                            Blockchain technologies the Fetti Ecosystem is able to digitally reward good 
-                            Samaritans for their hard work and dedication to seeing the Fetti community 
-                            grow and succeed. Rewards are paid out in the form of Solana Tokens we call,
-                            Fetti (FETTI). With the Solana Blockchain at Fetti's core, we are able to 
-                            securely store all transaction data and digitally prove the time each good 
-                            deed takes in the form of a smart contract. Every Good Deed Deserves Fetti.
-                            <p/>
+                            Thank you all for participating in our FIRST EVER Giveaway! Please use the form 
+                            below to check to see if you are a winner and register for the airdop. 
+
+
                           </Typography>
-                          <Link
-                            key="WhitePaper"
-                            to="/Whitepaper"
-                            className="TeamLink"
+                        </Box>
+                        <Box mb={2}>
+
+                        <TextField
+                          variant="outlined"
+                          margin="normal"
+                          required
+                          fullWidth
+                          label="Public Key"
+                          inputRef={walletKey}
+                          autoFocus
+                          autoComplete="off"
+                          type="text"
+                        />         
+                          <Button
+                            onClick={() => {
+                              const val = document.querySelector('input').value;
+                              if (val === "") {
+                                console.log("no value");
+                                return;
+                              }
+                              
+                              const winners = json.winner;
+                            
+                              console.log(val);
+                            
+                              var win = false;
+                              for (let i = 0; i < winners.length; i++) 
+                                if (winners[i].toString() === val) win = true;
+                              
+                              if (win === true) {
+                                console.log("win === true");
+                                
+                                
+ 
+                                
+                              } else {
+                                
+                                //write to losers.json
+                                console.log("loser");
+
+
+                              }
+                              
+
+                              
+                            }}
+                            variant="contained"
+                            color="secondary"
                           >
-                            <Button
-                              variant="contained"
-                              color="secondary"
-                              fullWidth
-                              className={classes.extraLargeButton}
-                              classes={{ label: classes.extraLargeButtonLabel }}
-                            >
-                              Check out the Whitepaper
-                            </Button>
-                          </Link>
+                            Check Winner 
+                          </Button>
                         </Box>
                       </div>
                     </Box>
                   </Grid>
-                  <Hidden smDown> 
-                    <Grid item md={6} id="Zoom-Image">
-                      <Box md={6}> 
-                        <p />
-                      </Box>
-                    </Grid>
-                  </Hidden>
                 </Box>
               </div>
             </Card>
@@ -187,10 +238,10 @@ function HeadSection(props) {
   );
 }
 // <WaveBorder
-// upperColor={theme.palette.secondary.main}
-// lowerColor="#FFFFFF"
-// className={classes.waveBorder}
-// animationNegativeDelay={2}
+//  upperColor={theme.palette.secondary.main}
+//  lowerColor="#FFFFFF"
+//  className={classes.waveBorder}
+//  animationNegativeDelay={2}
 // />
 HeadSection.propTypes = {
   classes: PropTypes.object,

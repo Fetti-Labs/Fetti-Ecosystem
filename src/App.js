@@ -33,6 +33,9 @@ function App() {
             <Route path="/ark">
               <LoggedOutComponent />
             </Route>
+            <Route path="/winners">
+              <LoggedOutComponent />
+            </Route>
             <Route>
               <LoggedOutComponent />
             </Route>
