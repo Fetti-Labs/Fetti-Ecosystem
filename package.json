@@ -21,7 +21,7 @@
     "@solana/spl-token-registry": "^0.2.2808",
     "@solana/web3.js": "^1.36.0",
     "@stripe/react-stripe-js": "^1.4.1",
-    "@stripe/stripe-js": "^1.16.0",
+    "@stripe/stripe-js": "^1.47.0",
     "@syncfusion/ej2-base": "^19.4.52",
     "@syncfusion/ej2-react-charts": "^19.4.54",
     "aos": "^2.3.4",
